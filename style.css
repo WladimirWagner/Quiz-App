@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: beige !important;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: beige !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress {
+  border-radius: 0 !important;
+}
+.progress-bar {
+  background-color: #1F485E !important;
+}
+
+.quiz-card {
+  width: 45rem !important;
+}
+
+.row {
+  min-height: 35rem;
+}
+
+.startscreen {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-button {
+  padding: 16px !important;
+  margin-top: 16px;
+}
+
+.card-title {
+  font-weight: bold;
+  padding: 16px;
+}
+
+.card-leftside {
+  width: 25% !important;
+  background-color: #1F485E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-leftside img {
+  padding: 8px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+}
+
+.links a {
+  padding: 4px;
+  color: white;
+  text-decoration: none;
+}
+
+.links a:hover {
+  cursor: pointer;
+  color: beige;
+}
+
+.card-rightside {
+  width: 75% !important;
+}
+
+.quiz-answer {
+  padding: 20px;
+}
+
+.quiz-answer:hover {
+  cursor: pointer;
+  background-color: lightcyan;
+}
+
+.question-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.right-answer {
+  background-color: lightgreen !important;
+}
+
+.wrong-answer {
+  background-color: lightcoral !important;
+}
+
+.endscreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.endscreen-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.endscreen-top img {
+  width: 8rem;
+  padding: 8px;
+}
+
+.endscreen-mid {
+  padding: 8px;
+}
+
+.endscreen-end {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.endscreen-end button {
+  margin: 4px !important;
+}
+
+.tropy {
+  width: 8rem;
+  position: absolute;
+  right: 0;
+}

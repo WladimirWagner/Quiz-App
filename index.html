@@ -4,11 +4,108 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 
-<body>
-  
+<body onload="init()">
+  <div class="container">
+    <div class="card mb-3 quiz-card">
+      <div class="progress">
+        <div id="progressbar" class="progress-bar" role="progressbar"  style="width: 0%;">
+        </div>
+      </div>
+
+      <div class="row g-0">
+        <div class="col-md-4 card-leftside">
+          <div>
+            <img src="./img/logo.png" alt="">
+          </div>
+          <div class="links">
+            <a href="">HTML</a>
+            <a href="">CSS</a>
+            <a href="">JS</a>
+            <a href="">JAVA</a>
+          </div>
+        </div>
+
+        <div id="startscreen" class="col-md-8 d startscreen card-rightside"> 
+          <span><b>Welcome to</b></span>
+          <span><b>The Awesome HTML Quiz</b></span>
+          <span>Ready for the Challenge?</span>
+          <button class="btn btn-primary start-button" onclick="showQuestion()">START NOW</button>
+        </div>
+
+        <div id="questionBody" class="col-md-8 card-rightside" style="display:none">
+
+          
+          <div class="card-body">
+            <h5 class="card-title" id="questionText">Frage</h5>
+            
+            <div class="card quiz-answer mb-2" onclick="answer(1)">
+              <div class="card-body" id="1">
+                
+              </div>
+            </div>
+    
+            <div class="card quiz-answer mb-2" onclick="answer(2)">
+              <div class="card-body" id="2">
+             
+              </div>
+            </div>
+    
+            <div class="card quiz-answer mb-2" onclick="answer(3)">
+              <div class="card-body" id="3">
+                
+              </div>
+            </div>
+    
+            <div class="card quiz-answer mb-2" onclick="answer(4)">
+              <div class="card-body" id="4">
+                
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="endscreen" class="col-md-8 d endscreen card-rightside" style="display:none">
+          <div class="endscreen-top">
+            <img src="./img/brain result.png" alt="">
+            <span><b>COMPLETE</b></span><span><b>HTML QUIZ</b></span>
+          </div>
+          <div class="endscreen-mid">
+            <span>YOUR SCORE</span>
+            <span>
+              <b id="rightAnswers">10</b>
+              <b>/</b>
+              <b id="amountOfQuestions">10</b>
+            </span>
+          </div>
+          <div class="endscreen-end">
+            <button class="btn btn-primary">SHARE</button>
+            <button class="btn btn-primary" onclick="replayGame()">REPLAY</button>
+            <button id="exit-button" type="button" class="btn btn-secondary" onclick="showStartscreen()">EXIT</button>
+          </div>
+          <img class="tropy" src="./img/tropy.png" alt="">
+        </div>
+      
+      </div>
+
+      <div id="questionFooter" class="question-footer" style="display:none">
+        <span>
+          <b id="currentNumber"></b> von <b id="questionNumber"></b> Fragen
+        </span>
+        <button id="exit-button" type="button" class="btn btn-secondary" onclick="showStartscreen()">EXIT</button>
+        <button id="next-button" type="button" class="btn btn-secondary" disabled onclick="nextQuestion()">NEXT QUESTION</button>
+      </div>
+
+    </div>
+  </div>
 </body>
 </html>
